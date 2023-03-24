@@ -1,0 +1,60 @@
+@use "../util/_buttons" as *;
+@use "../layout/_flex" as *;
+
+.homepage {
+  @include flexCenter;
+  flex-direction: column;
+  height: 100vh;
+  strong {
+    padding-bottom: 10px;
+  }
+}
+
+.login {
+  height: 100vh;
+  @include flexCenter;
+  button {
+    @include submitButton;
+  }
+}
+
+.tasks {
+  padding-top: 20px;
+  .tasks-options {
+    max-width: 900px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+    a {
+      color: black;
+      background-color: rgb(128, 246, 54);
+      padding: 12px;
+      border-radius: 8px;
+      transition: 0.3s;
+      &:hover {
+        background-color: rgb(116, 234, 42);
+      }
+    }
+  }
+}
+
+.new-task {
+  height: 100vh;
+  @include flexCenter;
+  flex-direction: column;
+  textarea {
+    width: 40vw;
+    max-width: 400px;
+    height: 150px;
+    border-radius: 4px;
+    resize: none;
+  }
+  button {
+    @include submitButton;
+  }
+  .new-task-back {
+    padding-top: 20px;
+  }
+}
